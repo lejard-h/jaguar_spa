@@ -21,7 +21,7 @@ class JaguarSpa extends _$JaguarJaguarSpa {
   Future<JaguarFile> redirect(String path) async {
     bool isPackage = false;
 
-    if (path.startsWith("packages/")) {
+    if (path.startsWith("packages/") && !isProd) {
       SyncPackageResolver resolver = await SyncPackageResolver.loadConfig("${Directory.current.uri}.packages");
       String toResolve = path.replaceFirst("packages/", "package:");
       Uri uri = await resolver.resolveUri(toResolve);
