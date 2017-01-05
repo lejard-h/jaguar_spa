@@ -1,0 +1,15 @@
+name: jaguar_spa
+version: 0.0.1
+
+authors:
+- Hadrien Lejard <hadrien.lejard@gmail.com>
+
+homepage: https://github.com/lejard-h/jaguar_spa.git
+
+description: Api to serve SPA application
+
+dependencies:
+  jaguar: ">=0.1.1 <0.2.0"
+  package_resolver: 1.0.2
+  jaguar_static_file:
+    git: https://github.com/lejard-h/jaguar_static_file.git
